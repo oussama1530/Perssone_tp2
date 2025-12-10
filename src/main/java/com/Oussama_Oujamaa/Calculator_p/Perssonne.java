@@ -6,13 +6,8 @@ public class Perssonne {
 
     public Direction_po tourner(int fois){
         int current = Direction.ordinal();
-        for(int j = 1;j<=fois;j++){
-            if(j!=3){
-                Direction = Direction_po.values()[Direction.ordinal()+1];
-            }else{
-                Direction = Direction_po.NORD;
-            }
-        }
+        int nouveau_direction = (current+fois)%4 ;
+        this.Direction = Direction_po.values()[nouveau_direction];
         return Direction;
     }
 
