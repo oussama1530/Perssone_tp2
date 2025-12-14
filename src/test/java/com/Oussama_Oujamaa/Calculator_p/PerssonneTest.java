@@ -4,14 +4,15 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.*;
+
 
 class PerssonneTest {
 
     private Perssonne p1;
     @BeforeEach
     public void Star(){
-        p1 = new Perssonne("Ahmed");
+        p1 = new Perssonne("PERSSO");
         System.out.println("test Start...");
     }
     @AfterEach
@@ -19,14 +20,10 @@ class PerssonneTest {
         System.out.println("test end dispo for new test...");
     }
 
-//    public Perssonne p1 = new Perssonne("oussama");
-
     @Test
-    public void test_dir(){
-        System.out.println("Loading..");
-        int i = 5;
-        p1.tourner(i);  // First rotate the person
-        assertEquals(Direction_po.EST, p1.Direction);  // Check the direction field
+    public void test_changer_direction_du_nord_vers_est(){
+        assertThat(p1.tourner(1)).isEqualTo(Direction_po.NORD);
     }
+
 
 }
