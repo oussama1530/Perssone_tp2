@@ -22,8 +22,14 @@ class PerssonneTest {
 
     @Test
     public void test_changer_direction_du_nord_vers_est(){
-        assertThat(p1.tourner(1)).isEqualTo(Direction_po.NORD);
+        assertThat(p1.tourner(1)).isEqualTo(Direction_po.EST);
     }
+
+    @Test
+    public void test_changer_direction_du_nord_vers_nord(){
+        assertThat(p1.tourner(4)).isEqualTo(Direction_po.NORD);
+    }
+
 
 
 }
