@@ -29,4 +29,27 @@ class FizzBuzzTest {
 
     }
 
+    @Test
+    public void Fizz_test_avec_3(){
+        assertThat(FizzBuzz_de(3.0)).isEqualTo("Fizz");
+
+    }
+
+    @Test
+    public void Test_de_1_100(){
+        String test="";
+        for(int i =0;i<100 ;i++){
+            if(i%3==0){
+                test += "Fizz";
+            }else if(i%5==0){
+                test +="Buzz";
+            }else{
+                test+=(double)i;
+            }
+            assertThat(FizzBuzz_de((double)i)).isEqualTo(test);
+            test ="";
+        }
+    }
+
+
 }
