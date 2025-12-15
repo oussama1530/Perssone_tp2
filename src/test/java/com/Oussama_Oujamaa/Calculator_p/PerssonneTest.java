@@ -27,9 +27,13 @@ class PerssonneTest {
 
     @Test
     public void test_changer_direction_du_nord_vers_nord(){
-        assertThat(p1.tourner(4)).isEqualTo(Direction_po.NORD);
+        assertThat(p1.tourner(4)).isEqualTo(Direction_po.NORD);//test le mode circulaire
     }
 
-
+    @Test
+    public void test_changer_direction_avec_randomly_dynamique(){
+        int random_nbr =(int) (Math.random()*10);
+        assertThat(p1.tourner(random_nbr)).isEqualTo(Direction_po.values()[random_nbr%4]);
+    }
 
 }
