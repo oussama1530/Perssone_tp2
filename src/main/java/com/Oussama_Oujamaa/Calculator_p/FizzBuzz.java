@@ -7,7 +7,7 @@ public class FizzBuzz {
         } if (nbr%5==0){
             result +="Buzz";
         }
-        if(nbr%3!=0 && nbr%6!=0){
+        if((nbr%3!=0) && (nbr%6!=0)){
             result+=nbr;
         }
         return result;
