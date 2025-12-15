@@ -11,25 +11,22 @@ import static com.Oussama_Oujamaa.Calculator_p.FizzBuzz.FizzBuzz_de;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FizzBuzzTest {
-
     private FizzBuzz f1 ;
 
     @BeforeEach
-    public void start(){
-        f1 = new FizzBuzz();
-    }
+    public void start(){f1 = new FizzBuzz();}
 
     @AfterEach
-    public void end(){
-        System.out.println("Le system et pret pour un nouvelle test:");
-    }
-
+    public void end(){System.out.println("Le system et pret pour un nouvelle test:");}
 
     @Test
     public void Fizz_de1_test_0(){
         assertThat(FizzBuzz_de(0.0)).isEqualTo("FizzBuzz");
     }
+    @Test
+    public void Fizz_test_avec_5(){
+        assertThat(FizzBuzz_de(5.0)).isEqualTo("Buzz");
 
-
+    }
 
 }

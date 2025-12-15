@@ -4,10 +4,9 @@ public class FizzBuzz {
         String result = "";
         if(nbr%3==0){
             result +="Fizz";
-        } if (nbr%5==0){
+        } else if(nbr%5==0){
             result +="Buzz";
-        }
-        if((nbr%3!=0) && (nbr%6!=0)){
+        }else{
             result+=nbr;
         }
         return result;
